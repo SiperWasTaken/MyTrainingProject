@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Schede" android:icon="@drawable/home"
+        android:id="@+id/fragSchede"/>
+    <item android:title="Timer" android:icon="@drawable/clock"
+        android:id="@+id/fragTimer" />
+    <item android:title="Cronometro" android:icon="@drawable/play"
+        android:id="@+id/fragCronometro" />
+</menu>
