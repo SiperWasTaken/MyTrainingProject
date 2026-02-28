@@ -1,79 +1,79 @@
 # Training Project 🏋️
 
-Un'applicazione Android per la gestione degli allenamenti, sviluppata nel tempo libero come progetto personale.
+An Android app for managing workouts, developed in my free time as a personal project.
 
-## Descrizione
+## Description
 
-Training Project è un'app dedicata a chi si allena e vuole tenere traccia dei propri workout in modo semplice ed efficace. L'applicazione offre strumenti di cronometraggio e gestione delle schede di allenamento, tutto salvato localmente sul dispositivo.
+Training Project is an app for people who work out and want to track their workouts in a simple and effective way. The app provides timing tools and workout plan management, all saved locally on your device.
 
-## Funzionalità
+## Features
 
-### Cronometro 
-- Cronometro con funzioni di start/stop
-- Registrazione dei tempi parziali
-- Interfaccia intuitiva per monitorare i tempi di esecuzione
+### Stopwatch 
+- Stopwatch with start/stop functions
+- Recording of lap times
+- Simple interface to monitor your workout times
 
 ### Timer 
-- Timer personalizzabile con selezione di minuti e secondi
-- Funzioni di pausa e reset
-- Segnale sonoro al termine del countdown
-- Ideale per esercizi a tempo o intervalli
+- Customizable timer with minute and second selection
+- Pause and reset functions
+- Sound alert when countdown ends
+- Perfect for timed exercises or intervals
 
-### Gestione Schede 
-- Creazione di schede di allenamento personalizzate
-- Aggiunta e modifica di esercizi per ogni scheda
-- Per ogni esercizio è possibile specificare:
-  - Nome dell'esercizio
-  - Numero di set
-  - Tempi di recupero
-  - Tempi di esecuzione
-- Eliminazione di schede ed esercizi
-- Modifica dei nomi delle schede
-- Tutti i dati salvati localmente con Room Database
+### Workout Plans Management 
+- Create custom workout plans
+- Add and edit exercises for each plan
+- For each exercise you can set:
+  - Exercise name
+  - Number of sets
+  - Rest times
+  - Execution times
+- Delete plans and exercises
+- Edit plan names
+- All data saved locally with Room Database
 
-## Tecnologie Utilizzate
+## Technologies Used
 
-- **Linguaggio**: Kotlin
+- **Language**: Kotlin
 - **Database**: Room Database (SQLite)
 - **UI**: XML Layouts + ViewBinding
 - **Min SDK**: 24 (Android 7.0)
 - **Target SDK**: 34
 
-## Struttura del Progetto
+## Project Structure
 
 ```
 app/src/main/java/com/example/trainingproject/
-├── Home.kt                    # Activity principale con bottom navigation
-├── Cronometro.kt             # Fragment del cronometro
-├── Timer.kt                  # Fragment del timer
-├── Schede.kt                 # Fragment gestione schede
-├── EserciziScheda.kt         # Activity visualizzazione esercizi
-├── AggiungiEsercizio.kt      # Activity aggiunta esercizio
-├── ModificaEsercizio.kt      # Activity modifica esercizio
-├── AdapterListView/          # Adapter personalizzati per le liste
+├── Home.kt                    # Main activity with bottom navigation
+├── Cronometro.kt             # Stopwatch fragment
+├── Timer.kt                  # Timer fragment
+├── Schede.kt                 # Workout plans management fragment
+├── EserciziScheda.kt         # Exercise list activity
+├── AggiungiEsercizio.kt      # Add exercise activity
+├── ModificaEsercizio.kt      # Edit exercise activity
+├── AdapterListView/          # Custom adapters for lists
 ├── RoomDatabase/
-│   ├── entities/             # Entità del database (Scheda, Esercizio)
+│   ├── entities/             # Database entities (Scheda, Esercizio)
 │   ├── DAO/                  # Data Access Objects
 │   └── database/             # Database configuration
-└── ViewModels/               # ViewModel per la gestione dello stato
+└── ViewModels/               # ViewModels for state management
 ```
 
-## Possibili Sviluppi Futuri
+## Possible Future Updates
 
-- **Statistiche di Allenamento**: Generazione di grafici e metriche sull'andamento degli allenamenti dell'utente nel tempo
-- **Cronometri Automatici**: Sistema di timer automatici per tracciare i tempi di recupero tra gli esercizi senza intervento manuale
-- **Storico Allenamenti**: Registro completo degli allenamenti effettuati con date e performance
-- **Export/Import Dati**: Possibilità di esportare e importare le schede di allenamento
-- **Notifiche**: Promemoria per gli allenamenti programmati
-- **Temi Personalizzati**: Dark mode e personalizzazione dei colori
+- **Workout Statistics**: Charts and metrics showing workout progress over time
+- **Auto Timers**: Automatic timer system to track rest times between exercises without manual input
+- **Workout History**: Complete log of completed workouts with dates and performance
+- **Export/Import Data**: Ability to export and import workout plans
+- **Notifications**: Reminders for scheduled workouts
+- **Custom Themes**: Dark mode and color customization
 
-## Requisiti
+## Requirements
 
-- Android 7.0 (API 24) o superiore
-- Circa 10 MB di spazio libero
+- Android 7.0 (API 24) or higher
+- About 10 MB of free space
 
-## 📝 Note
+## 📝 Notes
 
-Questo è un progetto personale sviluppato nel tempo libero per scopi educativi e di utilità personale. L'app non raccoglie alcun dato personale e funziona completamente offline.
+This is a personal project developed in my free time for learning and personal use. The app doesn't collect any personal data and works completely offline.
 
-Tutti i dati vengono salvati localmente sul dispositivo dell'utente utilizzando Room Database.
+All data is saved locally on the user's device using Room Database.
