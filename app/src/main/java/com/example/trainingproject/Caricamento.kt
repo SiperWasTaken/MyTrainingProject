@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.trainingproject.AdapterListView.GestoreSchermo
 import kotlin.math.sqrt
 
+// Activity di caricamento iniziale dell'applicazione
 class Caricamento : AppCompatActivity() {
 
     private lateinit var titoloApp:TextView
@@ -44,6 +45,7 @@ class Caricamento : AppCompatActivity() {
 
     }
 
+    // Calcola le dimensioni dello schermo in pollici
     fun setIntches(){
         val metrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(metrics)
@@ -60,6 +62,7 @@ class Caricamento : AppCompatActivity() {
         sottotitolo.textSize = gestoreSchermo.getDim() * 3
     }
 
+    // Imposta le animazioni di caricamento
     fun setAnimazioni(){
 
         val blinkAnimation = AnimationUtils.loadAnimation(this, R.anim.blink_animation)

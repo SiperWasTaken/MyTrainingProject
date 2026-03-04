@@ -3,6 +3,7 @@ import androidx.lifecycle.*
 import kotlinx.coroutines.*
 import java.util.Locale
 
+// ViewModel per gestire lo stato del cronometro
 class CronometroViewModel : ViewModel() {
 
     private val _timeFormatted = MutableLiveData("00:00:00")
@@ -16,6 +17,7 @@ class CronometroViewModel : ViewModel() {
 
     private var job: Job? = null
 
+    // Avvia il cronometro
     fun startTimer() {
         if (isRunning) return
 
@@ -66,6 +68,7 @@ class CronometroViewModel : ViewModel() {
         return listaParziali
     }
 
+    // Formatta il tempo in formato mm:ss:cc
     private fun formatTime(timeInMillis: Long): String {
         val seconds = (timeInMillis / 1000).toInt()
         val millis = (timeInMillis % 1000) / 10

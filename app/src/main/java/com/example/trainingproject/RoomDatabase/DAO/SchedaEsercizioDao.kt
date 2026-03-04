@@ -6,6 +6,7 @@ import androidx.room.Query
 import com.example.trainingproject.RoomDatabase.entities.Esercizio
 import com.example.trainingproject.RoomDatabase.entities.Scheda
 
+// DAO per gestire le operazioni sul database
 @Dao
 interface SchedaEsercizioDao{
 

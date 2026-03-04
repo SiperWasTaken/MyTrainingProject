@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.fragment.app.viewModels
 import com.example.trainingproject.ViewModels.CronometroViewModel
 
+// Fragment con cronometro e gestione tempi parziali
 class Cronometro : Fragment() {
 
     private lateinit var timerDisplay: TextView
@@ -41,6 +42,7 @@ class Cronometro : Fragment() {
         viewModel.timeFormatted.observe(viewLifecycleOwner) { time ->
             timerDisplay.text = time
 
+            // Aggiorna i pulsanti in base allo stato
             if(time == "00:00:00"){
 
                 btnStartStop.text = "Start"

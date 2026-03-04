@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.trainingproject.R
 
+// Adapter personalizzato per visualizzare le schede in una ListView
 class ListAdapterSchede(
     context: Context,
     private val resource: Int,

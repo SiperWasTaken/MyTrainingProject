@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.trainingproject.R
 
+// Adapter personalizzato per visualizzare gli esercizi in una ListView
 class ListAdapterEsercizi(
     context: Context,
     private val dataArrayList: ArrayList<ListData>,

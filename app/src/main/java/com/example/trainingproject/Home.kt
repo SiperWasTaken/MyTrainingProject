@@ -10,6 +10,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+// Activity principale con navigazione bottom bar
 class Home : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +27,7 @@ class Home : AppCompatActivity() {
 
     }
 
+    // Configura i fragments con la bottom navigation
     private fun setFragments(){
 
         val navView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)

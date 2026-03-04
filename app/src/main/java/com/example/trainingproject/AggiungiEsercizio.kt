@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+// Activity per aggiungere un nuovo esercizio
 class AggiungiEsercizio : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +28,7 @@ class AggiungiEsercizio : AppCompatActivity() {
         switchSetup()
     }
 
+    // Configura lo switch per il tempo di esecuzione
     private fun switchSetup(){
 
         val switchEsecuzione = findViewById<Switch>(R.id.tempoEsecuzioneSwitch)
@@ -62,6 +64,7 @@ class AggiungiEsercizio : AppCompatActivity() {
 
     }
 
+    // Valida i dati e li passa all'activity chiamante
     fun passaDatiAggiungiScheda(view: View){
 
         val nomeEsercizioText = findViewById<EditText>(R.id.nomeEsercizio)

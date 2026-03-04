@@ -13,8 +13,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 
+// Fragment per il timer con conto alla rovescia
 class Timer : Fragment() {
 
+    // Variabili per gestire il timer
     private lateinit var timerDisplay: TextView
     private var countDownTimer: CountDownTimer? = null // Variabile per il timer
     private var timeRemainingInMillis: Long = 0 // Variabile per il tempo rimanente
@@ -96,6 +98,7 @@ class Timer : Fragment() {
     }
 
 
+    // Avvia il timer con il tempo specificato
     private fun startTimer(timeInMillis: Long) {
         timeRemainingInMillis = timeInMillis
 
@@ -132,12 +135,14 @@ class Timer : Fragment() {
     }
 
 
+    // Riproduce un suono di avviso
     private fun playSound() {
         mediaPlayer?.release()
         mediaPlayer = MediaPlayer.create(requireContext(), R.raw.beep)
         mediaPlayer?.start()
     }
 
+    // Riproduce il suono finale in loop
     private fun playEndSound(){
         mediaPlayer?.release()
         mediaPlayer = MediaPlayer.create(requireContext(), R.raw.beep)
@@ -165,6 +170,7 @@ class Timer : Fragment() {
         mediaPlayer?.release()
     }
 
+    // Resetta il timer allo stato iniziale
     private fun resetTimer() {
         countDownTimer?.cancel()
         timeRemainingInMillis = 0

@@ -18,6 +18,7 @@ import com.example.trainingproject.RoomDatabase.database.AppDatabase
 import com.example.trainingproject.RoomDatabase.entities.Scheda
 import kotlinx.coroutines.launch
 
+// Fragment per la gestione delle schede di allenamento
 class Schede : Fragment() {
 
     private lateinit var listView: ListView
@@ -116,6 +117,7 @@ class Schede : Fragment() {
     }
 
 
+    // Carica le schede dal database
     private fun loadSchedeFromDatabase() {
         lifecycleScope.launch {
 
@@ -131,6 +133,7 @@ class Schede : Fragment() {
         }
     }
 
+    // Elimina una scheda dal database
     private fun deleteScheda(schedaId: Int) {
 
         AlertDialog.Builder(requireContext())
@@ -155,6 +158,7 @@ class Schede : Fragment() {
             .show()
     }
 
+    // Mostra il dialogo per modificare il nome della scheda
     private fun allertModificaScheda(schedaId: Int){
 
         val inputEditText = EditText(requireContext())
@@ -193,6 +197,7 @@ class Schede : Fragment() {
     }
 
 
+    // Inserisce una nuova scheda nel database
     private fun insertDatabase(nomeScheda: String) {
         if (nomeScheda.isNotEmpty()) {
             lifecycleScope.launch {

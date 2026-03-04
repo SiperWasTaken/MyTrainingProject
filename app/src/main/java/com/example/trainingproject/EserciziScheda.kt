@@ -17,6 +17,7 @@ import com.example.trainingproject.RoomDatabase.database.AppDatabase
 import com.example.trainingproject.RoomDatabase.entities.Esercizio
 import kotlinx.coroutines.launch
 
+// Activity per visualizzare e gestire gli esercizi di una scheda
 class EserciziScheda : AppCompatActivity() {
 
     companion object {
@@ -65,6 +66,7 @@ class EserciziScheda : AppCompatActivity() {
 
     }
 
+    // Carica gli esercizi dal database per la scheda corrente
     private fun loadEsercizi() {
 
         lifecycleScope.launch {
@@ -102,6 +104,7 @@ class EserciziScheda : AppCompatActivity() {
 
     }
 
+    // Elimina un esercizio dal database
     private fun deleteEsercizio(esercizioId: Int) {
 
         AlertDialog.Builder(this)

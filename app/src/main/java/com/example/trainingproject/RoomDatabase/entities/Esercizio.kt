@@ -4,6 +4,7 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
+// Entità database per gli esercizi
 @Entity(
     foreignKeys = [ForeignKey(
         entity = Scheda::class,
